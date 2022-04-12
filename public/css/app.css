@@ -380,6 +380,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+body {
+  font-family: "Inter", sans-serif;
+}
+
 *, ::before, ::after {
   --tw-translate-x: 0;
   --tw-translate-y: 0;
@@ -545,12 +549,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: center;
 }
 .text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 1rem;
 }
 .text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-size: 1.25rem;
 }
 .font-semibold {
   font-weight: 600;
@@ -631,7 +633,7 @@ Ensure the default browser behavior of the `hidden` attribute.
     color: rgb(156 163 175 / var(--tw-text-opacity));
   }
 }
-@media (min-width: 640px) {
+@media (min-width: 540px) {
 
   .sm\:ml-0 {
     margin-left: 0px;
@@ -678,7 +680,7 @@ Ensure the default browser behavior of the `hidden` attribute.
     text-align: right;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 720px) {
 
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -692,7 +694,7 @@ Ensure the default browser behavior of the `hidden` attribute.
     border-left-width: 1px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
 
   .lg\:px-8 {
     padding-left: 2rem;
