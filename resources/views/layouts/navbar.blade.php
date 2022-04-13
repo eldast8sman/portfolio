@@ -15,9 +15,9 @@
                     <img 
                         src="{{ url('/img/logo-white.png') }}"
                         alt="logo"
-                        class="w-[48px] lg:w-[64px] inline-block dark:inline-block"
+                        class="w-[48px] lg:w-[64px] hidden dark:inline-block"
                     />
-                    <span class="text-xl xl:text-2xl font-bold text-[#0c7187] dark:text-white">OmotolaniOlurotimi</span>
+                    <span class="text-xl xl:text-2xl font-bold text-[#0c7187] dark:text-white pl-2">OmotolaniOlurotimi</span>
                 </a>
             </div>
             <div class="flex px-4 justify-end items-center w-full">
