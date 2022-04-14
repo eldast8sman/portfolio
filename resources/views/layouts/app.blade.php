@@ -10,12 +10,14 @@
         
         <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
     </head>
-    <body class="antialiased">
-        <!-- ====== Navbar Section Start -->
-        <x-layouts.navbar></x-layouts.navbar>
-        <!-- ====== Navbar Section End -->
-        {{$slot}}
-        <footer></footer>
+    <body class="antialiased texxt-gray-800 dark:text-200">
+        <div class="min-h-screen bg-gray-100 dark:bg-gray-900 pt-24">
+            <!-- ====== Navbar Section Start -->
+            <x-layouts.navbar></x-layouts.navbar>
+            <!-- ====== Navbar Section End -->
+            {{$slot}}
+            <x-layouts.footer></x-layouts.footer>
+        </div>
         <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>
