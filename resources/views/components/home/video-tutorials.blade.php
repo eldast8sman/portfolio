@@ -1,3 +1,3 @@
 <div>
-    <!-- Simplicity is the ultimate sophistication. - Leonardo da Vinci -->
+    <!-- Life is available only in the present moment. - Thich Nhat Hanh -->
 </div>

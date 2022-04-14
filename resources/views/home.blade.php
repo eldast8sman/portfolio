@@ -1,3 +1,3 @@
 <x-app-layout>
-    Content
+    <x-home.hero></x-home.hero>
 </x-app-layout>

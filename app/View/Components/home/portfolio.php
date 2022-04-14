@@ -4,7 +4,7 @@ namespace App\View\Components\home;
 
 use Illuminate\View\Component;
 
-class portfolio extends Component
+class Portfolio extends Component
 {
     /**
      * Create a new component instance.

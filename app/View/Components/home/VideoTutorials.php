@@ -4,7 +4,7 @@ namespace App\View\Components\home;
 
 use Illuminate\View\Component;
 
-class video-tutorials extends Component
+class VideoTutorials extends Component
 {
     /**
      * Create a new component instance.
