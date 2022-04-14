@@ -33,6 +33,9 @@
                             @foreach ($navigationItems as $item)
                                 <x-layouts.navbar-item :href="$item['href']">{{ $item['label'] }}</x-layouts.navbar-item>
                             @endforeach
+
+                            <!--<div class="g-ytsubscribe" data-channelid="" data-layout="default"
+                                    data-count="default"></div>-->
                         </ul>
                     </nav>
                 </div>

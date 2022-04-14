@@ -9,8 +9,9 @@
         <!-- Fonts -->
         
         <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
+        <script src="https://apis.google.com/js/platform.js"></script>
     </head>
-    <body class="antialiased texxt-gray-800 dark:text-200">
+    <body class="antialiased text-gray-800 dark:text-gray-200">
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900 pt-24">
             <!-- ====== Navbar Section Start -->
             <x-layouts.navbar></x-layouts.navbar>
