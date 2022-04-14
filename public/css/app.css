@@ -692,11 +692,17 @@ body{
 .text-xl{
   font-size: 1.5rem;
 }
+.text-xs{
+  font-size: .875rem;
+}
 .font-semibold{
   font-weight: 600;
 }
 .font-bold{
   font-weight: 700;
+}
+.font-medium{
+  font-weight: 500;
 }
 .uppercase{
   text-transform: uppercase;
@@ -738,6 +744,10 @@ body{
 .text-\[\#0c7187\]{
   --tw-text-opacity: 1;
   color: rgb(12 113 135 / var(--tw-text-opacity));
+}
+.text-dark{
+  --tw-text-opacity: 1;
+  color: rgb(9 14 52 / var(--tw-text-opacity));
 }
 .underline{
   -webkit-text-decoration-line: underline;
@@ -900,6 +910,11 @@ body{
     );
   }
   
+  .hover\:text-primary:hover{
+  --tw-text-opacity: 1;
+  color: rgb(12 113 135 / var(--tw-text-opacity));
+}
+  
   .dark .dark\:inline-block{
   display: inline-block;
 }
@@ -926,6 +941,11 @@ body{
   .dark .dark\:text-gray-300{
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+  
+  .dark .dark\:text-gray-200{
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
 }
   
   @media (min-width: 540px){
@@ -958,12 +978,20 @@ body{
     right: 1rem;
   }
 
+  .lg\:ml-6{
+    margin-left: 1.5rem;
+  }
+
   .lg\:block{
     display: block;
   }
 
   .lg\:flex{
     display: flex;
+  }
+
+  .lg\:inline-flex{
+    display: inline-flex;
   }
 
   .lg\:w-\[64px\]{
@@ -1000,6 +1028,10 @@ body{
 }
   
   @media (min-width: 1140px){
+
+  .xl\:ml-12{
+    margin-left: 3rem;
+  }
 
   .xl\:text-2xl{
     font-size: 1.875rem;
