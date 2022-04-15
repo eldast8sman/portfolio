@@ -854,6 +854,9 @@ body{
 .leading-normal{
   line-height: 1.5;
 }
+.leading-tight{
+  line-height: 1.25;
+}
 .text-\[\#0c7187\]{
   --tw-text-opacity: 1;
   color: rgb(12 113 135 / var(--tw-text-opacity));
@@ -1183,6 +1186,13 @@ body{
   border-color: rgb(12 113 135 / var(--tw-border-opacity));
 }
   
+  @media (min-width: 400px){
+
+  .xs\:block{
+    display: block;
+  }
+}
+  
   @media (min-width: 540px){
 
   .sm\:mx-4{
@@ -1192,6 +1202,10 @@ body{
 
   .sm\:mr-4{
     margin-right: 1rem;
+  }
+
+  .sm\:mb-8{
+    margin-bottom: 2rem;
   }
 
   .sm\:px-4{
@@ -1210,6 +1224,10 @@ body{
 
   .sm\:text-4xl{
     font-size: 3rem;
+  }
+
+  .sm\:text-\[38px\]{
+    font-size: 38px;
   }
 }
   
@@ -1249,6 +1267,10 @@ body{
 
   .lg\:mt-0{
     margin-top: 0px;
+  }
+
+  .lg\:mb-0{
+    margin-bottom: 0px;
   }
 
   .lg\:block{
