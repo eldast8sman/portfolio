@@ -562,6 +562,10 @@ body{
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
 .mb-0{
   margin-bottom: 0px;
 }
@@ -772,6 +776,14 @@ body{
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+.py-12{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.px-8{
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 .pr-4{
   padding-right: 1rem;
@@ -1203,6 +1215,10 @@ body{
   
   @media (min-width: 720px){
 
+  .md\:p-\[70px\]{
+    padding: 70px;
+  }
+
   .md\:px-9{
     padding-left: 2.25rem;
     padding-right: 2.25rem;
@@ -1281,6 +1297,10 @@ body{
 
   .lg\:items-center{
     align-items: center;
+  }
+
+  .lg\:justify-end{
+    justify-content: flex-end;
   }
 
   .lg\:px-0{
