@@ -54,6 +54,8 @@
                     </p>
                     <p class="text-base dark:text-gray-400 mb-8">
                         I have a LlB Degree from the Faculty of Law of the Obafemi Awolowo University and a BL from the Nigerian Law School Lagos (Kano Campus)
+                        and I presently work as the Lead Developer at <a href="https://omotolaniolurotimi.com" class="text-primary" target="_blank">OmotolaniOlurotimi</a> and as 
+                        the Backend Developer at <a href="https://yenreach.com" class="text-primary" target="_blank">Yenreach</a> 
                     </p>
                     <x-button-link href="https://www.linkedin.com/in/omotolani-olurotimi-5b455b12a/" variant="primary" target="_blank">
                         My LinkedIn
