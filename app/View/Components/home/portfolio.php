@@ -20,7 +20,7 @@ class Portfolio extends Component
     {
         $this->items = [
             [
-                'category' => ['Laravel', 'Tailwind.css', 'Alpine,js'],
+                'category' => ['Laravel', 'TailwindCSS', 'AlpineJS'],
                 'title' => 'Portfolio Website with Laravel, TailwindCSS and AlpineJS',
                 'image' => url('/img/Resume.PNG'),
                 'url' => 'https://resume.omotolaniolurotimi.com'
@@ -57,7 +57,7 @@ class Portfolio extends Component
             ]
         ];
 
-        $this->tabs = Arr::flatten(Arr::pluck($this->items, 'category'));
+        $this->tabs = array_unique(Arr::flatten(Arr::pluck($this->items, 'category')));
     }
 
     /**
