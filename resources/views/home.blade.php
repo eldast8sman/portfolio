@@ -3,4 +3,5 @@
     <x-home.first-action></x-home.first-action>
     <x-home.about></x-home.about>
     <x-home.portfolio></x-home.portfolio>
+    <x-home.second-action></x-home.second-action>
 </x-app-layout>

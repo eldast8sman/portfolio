@@ -15,10 +15,10 @@
       <div class="w-full px-4">
         <div class="text-center mx-auto mb-[60px] max-w-[510px]">
           <h2 class="font-bold text-3xl sm:text-4xl md:text-[40px] text-dark dark:text-gray-300 mb-4">
-            My Recent Projects
+            Projects I Work(ed) On
           </h2>
           <p class="text-base text-body-color">
-            You learn most by building projects. Go ahead and build something right now.
+            You gain mastery of Programming by constantly picking up projects and working on them
           </p>
         </div>
       </div>
