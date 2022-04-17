@@ -5,4 +5,5 @@
     <x-home.portfolio></x-home.portfolio>
     <x-home.second-action></x-home.second-action>
     <x-home.video-tutorials></x-home.video-tutorials>
+    <x-home.contact></x-home.contact>
 </x-app-layout>
