@@ -55,59 +55,70 @@
                             formData: {
                                 name: '',
                                 email: '',
-                                message: ''
-                            },
-                            errors: {},
-                            successMessage: '',
-
-                            submitForm(event){
+                                message: '',
+                              },
+                              errors: {},
+                              successMessage: '',
+                
+                              submitForm(event) {
                                 this.successMessage = '';
                                 this.errors = {};
-
-                                fetch('/contact/submit', {
+                                  fetch(`/contact/submit`, {
                                     method: 'POST',
                                     headers: {
-                                        'Content-Type': 'application/json',
-                                        'X-Requested-With': 'XMLHttpRequest'
-                                        'X-CSRF-TOKEN': document.querySelector('meta[namme='csrf-token']').getAttribute('content')
+                                      'Content-Type': 'application/json',
+                                      'X-Requested-With': 'XMLHttpRequest',
+                                      'X-CSRF-TOKEN': document.querySelector(`meta[name='csrf-token']`).getAttribute('content')
                                     },
                                     body: JSON.stringify(this.formData)
-                                })
-                                .then(response => {
-                                    if(response.status === 200){
-                                        return response.json();
+                                  })
+                                  .then(response => {
+                                    if (response.status === 200) {
+                                      return response.json();
                                     }
                                     throw response;
-                                })
-                                .then(result => {
+                                  })
+                                  .then(result => {
                                     this.formData = {
-                                        name: '',
-                                        email: '',
-                                        message: ''
+                                      name: '',
+                                      email: '',
+                                      message: '',
                                     };
                                     this.successMessage = 'Thanks for your contact request. I will get back to you shortly.';
-                                })
-                                .catch(res => {
-                                    if (res.status === 422) {
-                                        this.errors = result.errors;
+                                  })
+                                  .catch(async (response) => {
+                                    const res = await response.json();
+                                    if (response.status === 422) {
+                                      this.errors = res.errors;
                                     }
                                     console.log(res);
-                                })
-                            }
-                        }
+                                  })
+                              }
+                          }
                     " x-on:Submit.prevent="submitForm">
                         <template x-if="successMessage">
                             <div x-text="successMessage" class="py-4 px-6 bg-green-600 text-gray-100 mb-4"></div>
                         </template>
                         @csrf
                         <div class="mb-6">
-                            <x-forms.input placeholder="Your Name" name="name" x-model="formData.name"></x-forms.input>
+                            <x-forms.input placeholder="Your Name" name="name" x-model="formData.name" ::class="errors.name ? 'border-red-500 focus:border-red-500' : ''"></x-forms.input>
+                            <template x-if="errors.name">
+                                <div x-text="errors.name[0]" class="text-red-500"></div>
+                            </template>
                         </div>
+                        
                         <div class="mb-6">
-                            <x-forms.input type="email" placeholder="Your Email" name="email" x-model="formData.email"></x-forms.input>
+                            <x-forms.input type="email" placeholder="Your Email" name="email" x-model="formData.email" ::class="errors.email ? 'border-red-500 focus:border-red-500' : ''"></x-forms.input>
+                            <template x-if="errors.email">
+                                <div x-text="errors.email[0]" class="text-red-500"></div>
+                            </template>
                         </div>
+                        
                         <div class="mb-6">
-                            <x-forms.textarea placeholder="Your Message" name="message" rows="6" x-model="formData.message"></x-forms.textarea>
+                            <x-forms.textarea placeholder="Your Message" name="message" rows="6" x-model="formData.message" ::class="errors.message ? 'border-red-500 focus:border-red-500' : ''"></x-forms.textarea>
+                            <template x-if="errors.message">
+                                <div x-text="errors.message[0]" class="text-red-500"></div>
+                            </template>
                         </div>
                         <div>
                             <x-button class="w-full">
