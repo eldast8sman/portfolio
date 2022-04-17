@@ -56,9 +56,49 @@
                                 name: '',
                                 email: '',
                                 message: ''
+                            },
+                            errors: {},
+                            successMessage: '',
+
+                            submitForm(event){
+                                this.successMessage = '';
+                                this.errors = {};
+
+                                fetch('/contact/submit', {
+                                    method: 'POST',
+                                    headers: {
+                                        'Content-Type': 'application/json',
+                                        'X-Requested-With': 'XMLHttpRequest'
+                                        'X-CSRF-TOKEN': document.querySelector('meta[namme='csrf-token']').getAttribute('content')
+                                    },
+                                    body: JSON.stringify(this.formData)
+                                })
+                                .then(response => {
+                                    if(response.status === 200){
+                                        return response.json();
+                                    }
+                                    throw response;
+                                })
+                                .then(result => {
+                                    this.formData = {
+                                        name: '',
+                                        email: '',
+                                        message: ''
+                                    };
+                                    this.successMessage = 'Thanks for your contact request. I will get back to you shortly.';
+                                })
+                                .catch(res => {
+                                    if (res.status === 422) {
+                                        this.errors = result.errors;
+                                    }
+                                    console.log(res);
+                                })
                             }
                         }
-                    ">
+                    " x-on:Submit.prevent="submitForm">
+                        <template x-if="successMessage">
+                            <div x-text="successMessage" class="py-4 px-6 bg-green-600 text-gray-100 mb-4"></div>
+                        </template>
                         @csrf
                         <div class="mb-6">
                             <x-forms.input placeholder="Your Name" name="name" x-model="formData.name"></x-forms.input>

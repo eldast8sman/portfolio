@@ -6,6 +6,8 @@
 
         <title>OmotolaniOlurotimi</title>
 
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
         <!-- Fonts -->
         
         <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
