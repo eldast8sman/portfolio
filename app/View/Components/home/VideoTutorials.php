@@ -6,6 +6,8 @@ use Illuminate\View\Component;
 
 class VideoTutorials extends Component
 {
+    public array $videoTutorials = [];
+    
     /**
      * Create a new component instance.
      *
@@ -13,7 +15,23 @@ class VideoTutorials extends Component
      */
     public function __construct()
     {
-        //
+        $this->videoTutorials = [
+            [
+                'videoId' => 'pha6SPRVnxA',
+                'title' => 'Website for the Ondo State Ministry of Health',
+                'description' => 'This is a Short Video showing the features of the Website I developed for the Ondo State Ministry of Health'
+            ],
+            [
+                'videoId' => 'IxL2G-ntKRs',
+                'title' => 'Business Listing Platform for Yenreach.com',
+                'description' => 'This is a Short Video showing the features of the Website I contributed to it\'s development for Yenreach.com'
+            ],
+            [
+                'videoId' => 'OQYG1QLK-XE',
+                'title' => 'Portal for Hollograph Technologies Services',
+                'description' => 'A Short Video showing the features of the Portal I developed for Hollograph Technologoes Services.'
+            ],
+        ];
     }
 
     /**
