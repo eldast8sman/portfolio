@@ -8,7 +8,7 @@
             some of my Source Codes?
         </h2>
     </x-slot>
-    <x-button-link href="https://www.github.com/eldast8sman" variant="dark" class="mr-3" target="_blank">
+    <x-button-link href="https://www.github.com/eldast8sman" variant="dark" class="mr-3 w-full mb-3 text-center lg:w-auto" target="_blank">
         Check My GitHub
     </x-button-link>
 </x-call-to-action>

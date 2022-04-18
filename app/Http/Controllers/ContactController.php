@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactMail;
 
 class ContactController extends Controller
 {
@@ -14,7 +16,8 @@ class ContactController extends Controller
             'message' => 'required'
         ]);
 
-        // Send Email
+        Mail::to('omotolaniolurotimi@gmail.com')
+            ->send(new ContactMail($validated['name'], $validated['email'], $validated['message']));
         return ['success' => true];
     }
 }
